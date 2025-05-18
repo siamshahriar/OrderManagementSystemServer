@@ -14,8 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 /* --- MongoDB ---- */
-const uri =
-  "mongodb+srv://siamshahriar2:siamshahriar2@cluster0.60af7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri, {
   serverApi: ServerApiVersion.v1,
 });
